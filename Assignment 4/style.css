@@ -1,0 +1,144 @@
+
+.grid-container{
+  display: grid;
+  grid-template-columns: iframe(1fr 3fr);
+  grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap: 10px;
+    background-color: black;
+    color:white;
+  }
+.nav{
+  padding: 20px;
+  border:1 solid black;
+  background-color: lightblue;
+  font-size: 20px;
+  /* text-align: center; */
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* transition: transform 0.25; */
+  /* transform: scale(1); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  flex-wrap: auto;
+  justify-content: space-around;
+  align-items: space-between;
+  gap: 20px;
+  /* grid-area: nav; */
+
+}
+.grid:nth-child(1){
+  grid-area:header;
+
+}
+.grid:nth-child(2){
+  grid-area: nav;
+
+}
+.grid:nth-child(3){
+  grid-area:main;
+
+}
+.grid:nth-child(4){
+  grid-area:sidebar;
+
+}
+.grid:nth-child(5){
+  grid-area:footer;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0);
+  transition: transform 0.25s;
+  /* grid-area: header; */
+  
+}
+
+.main, .sidebar{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* grid-area: main;
+  grid-area: sidebar; */
+
+
+
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.25s;
+  /* grid-area: footer; */
+
+}
+.button{
+  background-color= #4CAF50;
+  color: lightblue;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+@media(max-width: 600px){
+  .grid-container{
+    width: 70%
+    grid-template-columns: ifr;
+    grid-template-rows: auto 1fr auto;
+    gap: 5px;
+  }
+  .nav{
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+  }
+  .header, .footer{
+    font-size: 20px;
+    padding: 10rem;
+
+  }
+  .main, .sidebar{
+    flex-direction: column;
+    padding:10rem;
+    font-size:16px;
+
+  }
+  body{
+    font-size: 12px;
+
+  }
+  img{
+    img{
+      max-width: 100%;
+      height: auto;
+
+    }
+  }
+}
+
